@@ -1,0 +1,380 @@
+%-------------------------
+% Resume in Latex
+% Author
+% License: MIT
+%------------------------
+
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm} \textit{\footnotesize{#2}} & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}}  &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubheadingalt}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}, \textit{\footnotesize{#3}} &  \footnotesize{#2}\textit{\footnotesize{, #4}} \\
+   
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+
+
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+\newcommand{\resumeProjectalt}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}      \footnotesize{\textit{#2}}  &  \footnotesize{#4} \textit{\footnotesize{#3}} \\
+       
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{Hassan O. Abioye} % Your Name
+\newcommand{\course}{Computer Science B.S.E.} % Your Program
+\newcommand{\roll}{xxxxxxx} % Your Roll No.
+\newcommand{\phone}{xxxxxxxxxx} % Your Phone Number
+\newcommand{\emaila}{Abioyehassan@gmail.com} %Email 2
+
+
+
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+
+
+\parbox{2.35cm}{%
+\includegraphics[width=3cm,clip]{Princeton-University-Seal-Logo-1896.png}
+}
+\parbox{\dimexpr\linewidth-2.8cm\relax}{
+\begin{tabularx}{\linewidth}{L r} \\
+  \textbf{\Large \name} & \href{mailto:\emaila}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emaila}}\\
+  \course & \href{https://github.com/habioye}{\raisebox{0.0\height}{\footnotesize \faGithub}\ GitHub Profile, }
+  \href{https://habioye.github.io/Portfolio-Website}{\faCode Personal Website}\\
+  {Princeton University} & \href{https://www.linkedin.com/in/hassan-abioye-801613186/}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {LinkedIn Profile}}
+\end{tabularx}
+}
+% \parbox{3.0cm}{%
+% \flushright \includegraphics[width=2cm,clip]{nitp_logo.png}
+% }
+
+
+
+
+%-----------EDUCATION-----------
+\section{\textbf{Education}}
+  \resumeSubHeadingListStart
+    \resumeSubheadingalt
+      {Princeton University}{Princeton, NJ}
+      {B.S.E. in Computer Science}{2019-2023}
+  \resumeSubHeadingListEnd
+\vspace{-6.0mm}
+%
+
+
+
+%-----------EXPERIENCE-----------------
+\section{\textbf{Experience}}
+\vspace{-0.0mm}
+  \resumeSubHeadingListStart
+      \resumeSubheadingalt
+      { Fannie Mae (via Genspark) }{Chicago, IL}
+      {Data/Cloud Engineer}{May 2024 - October 2024}
+      \vspace{-1.0mm}
+      \resumeItemListStart 
+      \item{
+       Developed and deployed AWS-based solutions, including EC2 instances and Redshift, for data processing and storage.
+      }
+\item{Performed ETL operations and SQL-based CRUD tasks for data validation and transformation in collaboration with Data Analysts.}
+\item{Led development of a full-stack DBMS using Java, Spring Boot, Hibernate, MySQL, and Angular.}
+    \resumeItemListEnd
+    \vspace{-3.0mm}
+    \resumeSubheadingalt
+      { Amazon Web Services}{Seattle, WA}
+      {Software Development Engineer}{June 2022 - September 2022}
+      \vspace{-1.0mm}
+      \resumeItemListStart 
+    \item {Built and administered APIs for Kubernetes clusters to triage alarms and resolve large-scale AWS cluster issues.}
+    \item {Utilized Java, Bash scripting, and AWS pipelines to automate processes and improve system reliability.}
+    \item { Contributed to rapid recovery solutions for server shutdowns, ensuring high availability across hundreds of clusters.}
+    
+
+    \resumeItemListEnd
+    
+    \vspace{-3.0mm}
+    
+    \resumeSubheadingalt
+      { Applications of Computing Machinery}{Princeton, NJ}
+      {Technology Chair}{September 2022 - May 2023}
+      \vspace{-1.0mm}
+      \resumeItemListStart
+      \item {Maintained and updated ACM website using JavaScript, HTML/CSS, and Ruby for event and roster management.}
+\item {Organized technical workshops and competitive programming events in collaboration with Princeton Research Computing.}
+\item  {Provided leadership in technology initiatives, earning the Computer Science Service Award for exceptional contributions.}
+    \resumeItemListEnd
+
+      
+  \resumeSubHeadingListEnd
+\vspace{-8.5mm}
+
+
+
+%-----------PROJECTS-----------------
+
+\section{\textbf{Projects}}
+
+
+\resumeSubHeadingListStart
+
+   \vspace{-1mm}
+
+
+
+   % \vspace{-1mm}
+    \resumeProjectalt{\href{https://github.com/habioye/MovieBrowser}{Movie Browser}}{Project Owner, Web developer}{July 2024}{}
+     \vspace{-1mm}
+      \resumeItemListStart
+
+        \item {Developed a web application enabling users to browse movies, filter by genre, and save movies as favorites.}
+        \item {Integrated the OMDb API service to retrieve information like movie posters, cast, director, and ratings.}
+ 
+        \item {Assigned tasks to team members, using the agile methodology(Kanban), to ensure accountability and progress.}
+
+       \item {
+        \href{https://github.com/habioye/MovieBrowser}{https://github.com/habioye/MovieBrowser}
+        }
+
+        
+    \resumeItemListEnd
+\vspace{-3.5mm}
+
+
+
+
+   
+%     \resumeProjectalt{ \href{https://github.com/habioye/Distributed-File-Storage-System}{Fault-Tolerant Distributed Data File System}}{}{July 2024 - Current}{}
+%      \vspace{-1mm}
+%       \resumeItemListStart
+%         \item {Tools \& technologies used: Docker, Computer Networking, and C++.}
+%         \item {Data is organized as a file tree with changes in the tree based on a commit log.}
+%         \item {Docker instances would be responsible for storing their data and data for other instances in case there is a server shutdown and those instances need to be reinitialized.}
+%     \resumeItemListEnd
+% \vspace{-4.0mm}
+
+
+
+
+
+\resumeProjectalt
+{ Distributed and Concurrent Replicated State Machine}
+{Software Developer}{September 2022 - December 2022}{}
+\vspace{-1mm}
+\resumeItemListStart
+\item{Built a concurrent fault-tolerant key-value storage service structured as a replicated state machine with multiple key-value servers coordinating through RPCs.}
+
+
+\item{Designed the system to maintain fault tolerance, processing client requests as long as the majority of servers are available, and could communicate, despite failures or network partitions.}
+
+\item {
+\href{https://github.com/habioye/Distributed-and-Concurrent-Replicated-State-Machine}{ https://github.com/habioye/Distributed-and-Concurrent-Replicated-State-Machine}
+}
+\resumeItemListEnd
+
+\vspace{-2mm}
+    %\vspace{-2mm}
+
+
+    
+      
+  \resumeSubHeadingListEnd
+\vspace{-6.5mm}
+
+
+
+%-----------Technical skills-----------------
+\section{\textbf{Technical Skills and Interests}}
+ \begin{itemize}[leftmargin=0.05in, label={}]
+ 
+    \small{
+    \item{
+     % \textbf{Current Learning Path}{:  and Azure Developer Associate.} \\
+        \textbf{Certifications}{: \href{https://www.credly.com/earner/earned/badge/3ae08fdb-6123-4f57-ac4c-d59037d25728}{AWS Solutions Architect Associate (SAA)} and \href{https://learn.microsoft.com/api/credentials/share/en-us/HassanAbioye-6919/EC85A5F86459ABDE?sharingId=88D6874D9B396A8B}{Azure Deploying Cloud-Native Applications}.
+        } \\
+\textbf{Software Challenges}{: \href{https://learn.microsoft.com/en-us/challenges/1p5f0wj02x5my/leaderboard}{Azure Engineer Innovation Challenge} and \href{https://learn.microsoft.com/en-us/challenges/6n8t64dyww1m8/leaderboard}{Azure AI Engineer Innovation Challenge}.
+} \\
+\textbf{Programming Languages}{: Python, C++, Java, TypeScript, JavaScript, and SQL} \\
+\textbf{Frameworks \& Tools}{: Git, Spring/Spring Boot, Hibernate(ORM), Angular/React, and RESTful APIs(Postman)} \\
+\textbf{Other}{: Terminal Shell Scripting, Microservices, Distributed Systems, and ETL operations.}
+     \textbf{Soft Skills}{: Organizational leadership, agile methodology (Kanban), and effective communication.} \\
+     \textbf{Applicable Coursework}{: Distributed Systems, Leadership Development for Business, Economics and Computing, Machine Learning for Predictive Data Analytics, Advanced Programming Techniques, and Principles of Computer System Design.} \\
+    }}
+ \end{itemize}
+ %\vspace{-16pt}
+\vspace{-7.0mm}
+\section{\textbf{Soft Skills}}
+\begin{itemize}[leftmargin=0.05in, label={}]
+    \item {{Effective communicator with experience collaborating across technical and non-technical teams.} \\
+    \item {Strong problem-solving and abstract thinking skills for complex challenges.} \\
+    \item {Leadership experience in project management and organizational roles.} \\
+    }
+\end{itemize}
+
+
+%-----------Positions of Responsibility-----------------
+% \section{\textbf{Current Projects and Learning Paths}}
+% \vspace{-0.4mm}
+% \resumeSubHeadingListStart
+
+% % \vspace{-2mm}
+% \resumePOR{\href{https://github.com/habioye/Distributed-File-Storage-System}{Fault-Tolerant Distributed Data File System},}
+%     {\textit{Tools: C++,Network Protocols, and Docker}} 
+%     {July 2024 - Current}
+% \resumeSubHeadingListEnd
+% % \vspace{-5.5mm}
+% % \resumeSubHeadingListStart
+
+% % % \vspace{-2mm}
+% % \resumePOR{AWS Cloud Practitioner and Microsoft Ignite Azure AI Engineer/Developer Associate}
+% %     { \textit{} }
+% %     {September 2024 - Current} 
+% % \resumeSubHeadingListEnd
+% \vspace{-7.5mm}
+
+
+
+
+%-----------Achievements-----------------
+\section{\textbf{Achievements}}
+% \vspace{-0.4mm}
+\resumeSubHeadingListStart
+\resumePOR{ Princeton Computer Science Award } % Award
+    {Recognized for exceptional service as the Technology Chair of ACM.} % Event
+    {2022-2023} %Event Year
+    
+\resumePOR{ Ron Brown Captain} % Award
+    { Selected among the top 2\% of applicants.} % Event
+    {2019-2023} %Event Year
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+
+
+
+%-------------------------------------------
+\end{document}
