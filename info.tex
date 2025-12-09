@@ -51,9 +51,13 @@
     \vspace{-2.4mm}
 }
 
+% Remove vertical space from regular resumeItem
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
 
-% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemii}{$\circ$}
+
+% Replaces standard bullet with a tiny, vertically centered dot
+% created using math-mode typesetting. For compact resume lists.
 \renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
