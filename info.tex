@@ -60,13 +60,40 @@
 % created using math-mode typesetting. For compact resume lists.
 \renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
+% leftmargin=*: full indentation according to document default
+% labelsep=0mm: no space between the bullet and the text
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+
+% leftmargin=*: full indentation according to document default
+% itemsep=1.7mm: adds a small vertical gap between items for readability,
+% rightmargin=2ex: adds a little space on the right to keep the list tidy.
 \newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+
+% justify: LaTeX stretches spaces between words so that each line fills the full width.
+% leftmargin=3ex: slight indentation on the left.
+% rightmargin=2ex: small space on the right
+% no itemsep & itemsep=0mm: no extra vertical spacing between items
+% labelsep=1,2mm small gap between bullet and text.
 \newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
 
+
+% ends the itemize environment for resume sub heading.
+% adds 2mm of extra space below list for vertical separation.
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+
+% closes itemize environment used for skill entries.
+% adds -2mm of vertical space. Pulls next section closer for compact layout.
 \newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+
+% close itemize environment.
+% close the surrounding justify block.
+% adds -2mm of vertical space. Pulls next section closer for compact layout.
 \newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+
+% small vertical gap abover the section.
+% open a tcoorbox to give heading background.
+% Section title #1 is bold in tcolorbox. 
+% adds -4mm of vertical space. Pulls next section closer for compact layout.
 \newcommand{\cvsection}[1]{%
 \vspace{2mm}
 \begin{tcolorbox}
@@ -75,6 +102,7 @@
     \vspace{-4mm}
 }
 
+% define custom column types for tables made with `tabularx` package.
 \newcolumntype{L}{>{\raggedright\arraybackslash}X}%
 \newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
 \newcolumntype{C}{>{\centering\arraybackslash}X}%
