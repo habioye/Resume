@@ -132,7 +132,12 @@
 % \renewcommand{\labelitemii}{$\circ$}
 \renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
 % \setlist[itemize]{label=$\bullet$}
-\setlist[itemize]{label=$\vcenter{\hbox{\tiny$\bullet$}}$}
+% Define Labels
+\newcommand{\bulletlabel}{$\bullet$}
+\newcommand{\smallbulletlabel}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\circlelabel}{$\circ$}
+
+\setlist[itemize]{label=\smallbulletlabel}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=1.2mm, label={}]}
 \newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
