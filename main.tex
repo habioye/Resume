@@ -126,8 +126,13 @@
 % \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=1.2mm, label={}]}
 % \newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
     
-\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
-\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+
+
+\newenvironment{resumeItemList}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}{\end{itemize}\end{justify}\vspace{-2mm}}
+
+
+% \newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+% \newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
 
 
 \newcommand{\bulletend}{}
@@ -189,33 +194,33 @@
 {Fannie Mae (via Genspark)}{Chicago, IL}
 {Data/Cloud Engineer}{May 2024 -- October 2024}
 \vspace{-1.0mm}
-\resumeItemListStart
+\begin{resumeItemList}
 \item{
             Developed and deployed AWS-based solutions, including EC2 instances and Redshift, for data processing and storage\bulletend
       }
 \item{Performed ETL operations and SQL-based CRUD tasks for data validation/transformation in collaboration with Data Analysts\bulletend}
 \item{Led development of a full-stack DBMS using Java, Spring Boot, Hibernate, MySQL, and Angular\bulletend}
-\resumeItemListEnd
+\end{resumeItemList}
 \vspace{-3.0mm}
 \resumeSubheadingalt
 {Amazon Web Services}{Seattle, WA}
 {Software Development Engineer}{June 2022 -- September 2022}
 \vspace{-1.0mm}
-\resumeItemListStart
+\begin{resumeItemList}
 \item {Built and administered APIs for Kubernetes clusters to triage alarms and resolve large-scale AWS cluster issues\bulletend}
 \item {Utilized Java, Bash scripting, and AWS pipelines to automate processes and improve system reliability\bulletend}
 \item { Contributed to rapid recovery solutions for server shutdowns, ensuring high availability across hundreds of clusters\bulletend}
-\resumeItemListEnd
+\end{resumeItemList}
 \vspace{-3.0mm}
 \resumeSubheadingalt
 {Applications of Computing Machinery}{Princeton, NJ}
 {Technology Chair}{September 2022 -- May 2023}
 \vspace{-1.0mm}
-\resumeItemListStart
+\begin{resumeItemList}
 \item {Maintained and updated ACM website using JavaScript, HTML/CSS, and Ruby for event and roster management\bulletend}
 \item {Organized technical workshops and competitive programming events in collaboration with Princeton Research Computing\bulletend}
 \item  {Provided leadership in technology initiatives, earning the Computer Science Service Award for exceptional contributions\bulletend}
-\resumeItemListEnd
+\end{resumeItemList}
 \end{resumeSubHeadingList}
 \vspace{-8.5mm}
 
@@ -226,25 +231,25 @@
 % \vspace{-1mm}
 \resumeProjectalt{\href{https://github.com/habioye/MovieBrowser}{Movie Browser}}{Project Owner, Web developer}{July 2024}{}
 \vspace{-1mm}
-\resumeItemListStart
+\begin{resumeItemList}
 \item {Developed a web application enabling users to browse movies, filter by genre, and save movies as favorites\bulletend}
 \item {Integrated the OMDb API service to retrieve information like movie posters, cast, director, and ratings\bulletend}
 \item {Assigned tasks to team members, using the agile methodology(Kanban), to ensure accountability and progress\bulletend}
 \item {
             \href{https://github.com/habioye/MovieBrowser}{https://github.com/habioye/MovieBrowser}
       }
-\resumeItemListEnd
+\end{resumeItemList}
 \vspace{-3.5mm}
 % [commentedout.tex: Fault Tolerant Distributed File System]
 \resumeProjectalt
 {\href{https://github.com/habioye/Distributed-and-Concurrent-Replicated-State-Machine}{Distributed and Concurrent Replicated State Machine}}
 {Software Developer}{September 2022 -- December 2022}{}
 \vspace{-1mm}
-\resumeItemListStart
+\begin{resumeItemList}
 \item{Built a concurrent key-value storage service structured as a replicated state machine with coordination through RPCs\bulletend}
 \item{Implemented quorum-based fault tolerance, ensuring request handling despite server failures or network partitions\bulletend}
 \item {\href{https://github.com/habioye/Distributed-and-Concurrent-Replicated-State-Machine}{ https://github.com/habioye/Distributed-and-Concurrent-Replicated-State-Machine}}
-\resumeItemListEnd
+\end{resumeItemList}
 \vspace{-2mm}
 %\vspace{-2mm}
 \end{resumeSubHeadingList}
