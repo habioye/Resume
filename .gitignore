@@ -10,3 +10,6 @@ main*
 *.xdv
 Fonts-Library/*
 PDFChanges/*
+/Scratch/*
+.gitignore
+*.pdf
