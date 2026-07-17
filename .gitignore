@@ -13,3 +13,4 @@ PDFChanges/*
 /Scratch/*
 .gitignore
 *.pdf
+*.synctex(busy)
